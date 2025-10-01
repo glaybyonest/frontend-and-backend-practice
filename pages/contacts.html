@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Контакты</title>
         <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/modaldialog.css">
     </head>
     <body>
         <div class="page-container">
@@ -22,18 +23,76 @@
                 <h2 class="section-title">Контакты</h2>
                 <article class="contacts-container">
                     <section class="contact-item">
-                        <p>Адрес электронной почты: daniilsetskov@yandex.ru</p>
+                        <h3>Электронная почта</h3>
+                        <p>daniilsetskov@yandex.ru</p>
                     </section>
                     <section class="contact-item">
+                        <h3>Физический адрес</h3>
                         <p>Адрес: г. Лондон, ул. Южный порт, д. 24</p>
                     </section>
-                    <button class="contact-button">Позвоните мне</button>
+                    <section class="contact-item">
+                        <h3>Телефон</h3>
+                        <p>+79253130270</p>
+                    </section>
+                    <section class="contact-item">
+                        <h3>Время работы</h3>
+                        <p>Пн-Пт: 9:00-18:00</p>
+                    </section>
+                    <section class="contact-item">
+                        <h3>Социальные сети</h3>
+                        <p>VK, Telegram, WhatsApp</p>
+                    </section>
+                    <button class="contact-button" onclick="contactModal.showModal()">Позвоните мне</button>
                 </article>
             </main>
 
             <footer class="footer">
                 <p>Футер</p>
             </footer>
+
+            <dialog id="contactModal">
+            <div class="modal-header">
+                <h2>Форма обратной связи</h2>
+            </div>
+            <div class="modal-content">
+                <form id="feedbackForm" method="dialog">
+                    <div class="form-group">
+                        <label for="name">Имя <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Категория обращения <span class="required">*</span></label>
+                        <select id="category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="technical">Техническая поддержка</option>
+                            <option value="commercial">Коммерческое предложение</option>
+                            <option value="cooperation">Сотрудничество</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Текст обращения <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" onclick="cancelForm()">Отмена</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+
+        <script src="../src/modal.js"></script> 
         </div>
     </body>
 </html>
