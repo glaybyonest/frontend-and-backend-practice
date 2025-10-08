@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +7,60 @@
         <link rel="stylesheet" href="../style/style.css">
     </head>
     <body>
-        <div class="page-container">
-            <header class="header">Хэдер</header>
+        <div class="page">
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="header__title">Новости</h1>
+                    <button class="theme-switcher">🌙 Тёмная</button>
+                </div>
+            </header>
+            
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="practice.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-            <main class="content">
-                <h2 class="section-title">Новости</h2>
-                <article class="news-container">
+            
+            <main class="main">
+                <h2 class="experience__title">Последние новости</h2>
+                <article class="news">
                     <section class="news-card">
-                        <h3 class="news-title">Первый Привет</h3>
-                        <p class="news-meta">Дата: 2025-01-22 | Автор: Сецков Д.А.</p>
-                        <p class="news-text">Текст новости 1: Ограбили склад в Бирмингеме.</p>
+                        <h3 class="news-card__title">Первый Привет</h3>
+                        <p class="news-card__meta">Дата: 2025-01-22 | Автор: Сецков Д.А.</p>
+                        <p class="news-card__text">Текст новости 1: Ограбили склад в Бирмингеме.</p>
                     </section>
                     <section class="news-card">
-                        <h3 class="news-title">Удачный день</h3>
-                        <p class="news-meta">Дата: 2025-05-05 | Автор: Сецков Д.А.</p>
-                        <p class="news-text">Текст новости 2: Бизнес принес много денег.</p>
+                        <h3 class="news-card__title">Удачный день</h3>
+                        <p class="news-card__meta">Дата: 2025-05-05 | Автор: Сецков Д.А.</p>
+                        <p class="news-card__text">Текст новости 2: Бизнес принес много денег.</p>
                     </section>
                     <section class="news-card">
-                        <h3 class="news-title">Печальные известия</h3>
-                        <p class="news-meta">Дата: 2025-11-26 | Автор: Сецков Д.А.</p>
-                        <p class="news-text">Текст новости 3: Бизнес начал приносить убытки.</p>
+                        <h3 class="news-card__title">Печальные известия</h3>
+                        <p class="news-card__meta">Дата: 2025-11-26 | Автор: Сецков Д.А.</p>
+                        <p class="news-card__text">Текст новости 3: Бизнес начал приносить убытки.</p>
                     </section>
                 </article>
             </main>
 
             <footer class="footer">
-                <p>Футер</p>
+                <p>&copy; 2024 Новостной портал</p>
             </footer>
         </div>
+        
+        <script src="../src/theme.js"></script>
     </body>
 </html>
