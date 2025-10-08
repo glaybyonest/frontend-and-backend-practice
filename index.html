@@ -1,69 +1,93 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Семестровая работа</title>
+        <title>Главная - Портфолио</title>
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <div class="page-container">
-            <header class="header">Хэдер</header>
+        <div class="page">
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="header__title">Портфолио</h1>
+                    <button class="theme-switcher">🌙 Тёмная</button>
+                </div>
+            </header>
+            
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/news.html">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/practices.html">Практики</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/goods.html">Товары</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-            <main class="content">
-                <article class="profile-header">
-                    <h1 class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" src="images/tomasshelby.jpg" alt="Фото автора">
-                    <h2 class="profile-name">Сецков Даниил Александрович</h2>
-                    <p class="profile-group">ЭФБО-13-24</p>
+            
+            <main class="main">
+                <article class="profile">
+                    <h1 class="profile__title">Информация об авторе</h1>
+                    <img class="profile__photo" src="images/tomasshelby.jpg" alt="Фото автора">
+                    <h2 class="profile__name">Сецков Даниил Александрович</h2>
+                    <p class="profile__group">ЭФБО-13-24</p>
                 </article>
-                <section class="about-me">
-                    <h2>Обо мне</h2>
-                    <p>Обо мне: Я родился в Англии. Развивался. Становился богатым. Делал деньги.</p>
+                
+                <section class="about">
+                    <h2 class="about__title">Обо мне</h2>
+                    <p class="about__text">
+                        Я родился в Англии. Развивался. Становился богатым. Делал деньги. 
+                    </p>
                 </section>
-                <section class="skills-container">
-                    <h2>Мои навыки</h2>
-                    <div class="skills-grid">
-                        <div class="skill-tag">Интелектуальный</div>
-                        <div class="skill-tag">Сногшебательный</div>
-                        <div class="skill-tag">Обоятельный</div>
-                        <div class="skill-tag">Привлекательный</div>
+                
+                <section class="skills">
+                    <h2 class="skills__title">Мои навыки</h2>
+                    <div class="skills__grid">
+                        <div class="skill skill--intellectual">Интеллектуальный</div>
+                        <div class="skill skill--amazing">Сногсшибательный</div>
+                        <div class="skill skill--charming">Обаятельный</div>
+                        <div class="skill skill--attractive">Привлекательный</div>
                     </div>
                 </section>
-                <section class="experience-section">
-                    <h2 class="section-title">Мой опыт работы</h2>
-                    <div class="experience-grid">
+                
+                <section class="experience">
+                    <h2 class="experience__title">Мой опыт работы</h2>
+                    <div class="experience__grid">
                         <article class="experience-card">
-                            <h3 class="experience-title">В юности</h3>
-                            <p class="experience-desc">Воевал на войне.</p>
+                            <h3 class="experience-card__title">В юности</h3>
+                            <p class="experience-card__desc">Воевал на войне</p>
+                        </article>
+                        <article class="experience-card experience-card--highlight">
+                            <h3 class="experience-card__title">В 20-летнем возрасте</h3>
+                            <p class="experience-card__desc">Работал конюхом</p>
                         </article>
                         <article class="experience-card">
-                            <h3 class="experience-title">В 20 летнем возрасте</h3>
-                            <p class="experience-desc">Работал Конюхом.</p>
+                            <h3 class="experience-card__title">В состоятельном возрасте</h3>
+                            <p class="experience-card__desc">Открыл букмекерскую контору для ставок на забеги лошадей</p>
                         </article>
                         <article class="experience-card">
-                            <h3 class="experience-title">В состоятельном возрасте</h3>
-                            <p class="experience-desc">Открыл букмекерскую контору для ставок на забеги лошадей.</p>
-                        </article>
-                        <article class="experience-card">
-                            <h3 class="experience-title">На данный момент</h3>
-                            <p>Все хорошо, управляем бизнесом, развиваемся</p>
+                            <h3 class="experience-card__title">На данный момент</h3>
+                            <p class="experience-card__desc">Все хорошо, управляем бизнесом, развиваемся</p>
                         </article>
                     </div>
                 </section>
             </main>
             
             <footer class="footer">
-                <p>Футер</p>
+                <p>&copy; 2024 Портфолио Сецкова Даниила. Все права защищены.</p>
             </footer>
         </div>
+        
+        <script src="src/theme.js"></script>
     </body>
 </html>

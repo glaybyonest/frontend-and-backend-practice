@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +7,62 @@
         <link rel="stylesheet" href="../style/style.css">
     </head>
     <body>
-        <div class="page-container">
-            <header class="header">Хэдер</header>
+        <div class="page">
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="header__title">Товары</h1>
+                    <button class="theme-switcher">🌙 Тёмная</button>
+                </div>
+            </header>
+            
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="practice.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-            <main class="content">
-                <h2 class="section-title">Каталог товаров</h2>
-                <article class="goods-container">
-                    <section class="goods-card">
-                        <img class="goods-image" src="../images/costym.jpg" alt="Товар 1">
-                        <p class="goods-name">Костюм</p>
-                        <p class="goods-price">Цена: 100000 руб.</p>
+            
+            <main class="main">
+                <h2 class="experience__title">Каталог товаров</h2>
+                <article class="goods">
+                    <section class="goods-card goods-card--discount">
+                        <img class="goods-card__image" src="../images/costym.jpg" alt="Костюм">
+                        <p class="goods-card__name">Премиум костюм</p>
+                        <p class="goods-card__price">Цена: 100000 руб.</p>
+                        <p class="goods-card__price goods-card__price--old">150000 руб.</p>
                     </section>
                     <section class="goods-card">
-                        <img class="goods-image" src="../images/shlypa.jpeg" alt="Товар 2">
-                        <p class="goods-name">Шляпа</p>
-                        <p class="goods-price">Цена: 7000 руб.</p>
+                        <img class="goods-card__image" src="../images/shlypa.jpeg" alt="Шляпа">
+                        <p class="goods-card__name">Элитная шляпа</p>
+                        <p class="goods-card__price">Цена: 7000 руб.</p>
                     </section>
-                    <section class="goods-card">
-                        <img class="goods-image" src="../images/tyflya.jpg" alt="Товар 3">
-                        <p class="goods-name">Туфли</p>
-                        <p class="goods-price">Цена: 46590 руб.</p>
+                    <section class="goods-card goods-card--discount">
+                        <img class="goods-card__image" src="../images/tyflya.jpg" alt="Туфли">
+                        <p class="goods-card__name">Кожаные туфли</p>
+                        <p class="goods-card__price">Цена: 46590 руб.</p>
+                        <p class="goods-card__price goods-card__price--old">60000 руб.</p>
                     </section>
                 </article>
             </main>
 
             <footer class="footer">
-                <p>Футер</p>
+                <p>&copy; 2024 Магазин элитной одежды</p>
             </footer>
         </div>
+        
+        <script src="../src/theme.js"></script>
     </body>
 </html>

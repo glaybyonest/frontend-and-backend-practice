@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +8,55 @@
         <link rel="stylesheet" href="../style/modaldialog.css">
     </head>
     <body>
-        <div class="page-container">
-            <header class="header">Хэдер</header>
+        <div class="page">
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="header__title">Контакты</h1>
+                    <button class="theme-switcher">🌙 Тёмная</button>
+                </div>
+            </header>
+            
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="practice.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="news.html">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="practices.html">Практики</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="goods.html">Товары</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="contacts.html">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-            <main class="content">
-                <h2 class="section-title">Контакты</h2>
-                <article class="contacts-container">
+            
+            <main class="main">
+                <h2 class="experience__title">Контакты</h2>
+                <article class="contacts">
                     <section class="contact-item">
-                        <h3>Электронная почта</h3>
+                        <h3 class="contact-item__title">Электронная почта</h3>
                         <p>daniilsetskov@yandex.ru</p>
                     </section>
                     <section class="contact-item">
-                        <h3>Физический адрес</h3>
-                        <p>Адрес: г. Лондон, ул. Южный порт, д. 24</p>
+                        <h3 class="contact-item__title">Физический адрес</h3>
+                        <p>г. Лондон, ул. Южный порт, д. 24</p>
                     </section>
                     <section class="contact-item">
-                        <h3>Телефон</h3>
+                        <h3 class="contact-item__title">Телефон</h3>
                         <p>+79253130270</p>
                     </section>
                     <section class="contact-item">
-                        <h3>Время работы</h3>
+                        <h3 class="contact-item__title">Время работы</h3>
                         <p>Пн-Пт: 9:00-18:00</p>
                     </section>
                     <section class="contact-item">
-                        <h3>Социальные сети</h3>
+                        <h3 class="contact-item__title">Социальные сети</h3>
                         <p>VK, Telegram, WhatsApp</p>
                     </section>
                     <button class="contact-button" onclick="contactModal.showModal()">Позвоните мне</button>
@@ -47,52 +64,53 @@
             </main>
 
             <footer class="footer">
-                <p>Футер</p>
+                <p>&copy; 2024 Контактная информация</p>
             </footer>
 
-            <dialog id="contactModal">
-            <div class="modal-header">
-                <h2>Форма обратной связи</h2>
-            </div>
-            <div class="modal-content">
-                <form id="feedbackForm" method="dialog">
-                    <div class="form-group">
-                        <label for="name">Имя <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон <span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Электронная почта <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
-                    </div>
-                    <div class="form-group">
-                        <label for="category">Категория обращения <span class="required">*</span></label>
-                        <select id="category" name="category" required>
-                            <option value="">Выберите категорию</option>
-                            <option value="technical">Техническая поддержка</option>
-                            <option value="commercial">Коммерческое предложение</option>
-                            <option value="cooperation">Сотрудничество</option>
-                            <option value="complaint">Жалоба</option>
-                            <option value="suggestion">Предложение</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Текст обращения <span class="required">*</span></label>
-                        <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
-                    </div>
-                    <div class="modal-actions">
-                        <button type="button" class="btn btn-secondary" onclick="cancelForm()">Отмена</button>
-                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
-                    </div>
-                </form>
-            </div>
-        </dialog>
-
-        <script src="../src/modal.js"></script> 
+            <dialog id="contactModal" class="modal">
+                <div class="modal__header">
+                    <h2 class="modal__title">Форма обратной связи</h2>
+                </div>
+                <div class="modal__content">
+                    <form id="feedbackForm" method="dialog" class="form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Имя <span class="form__required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Телефон <span class="form__required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Электронная почта <span class="form__required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@mail.ru" class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <label for="category" class="form__label">Категория обращения <span class="form__required">*</span></label>
+                            <select id="category" name="category" required class="form__select">
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="message" class="form__label">Текст обращения <span class="form__required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..." class="form__textarea"></textarea>
+                        </div>
+                        <div class="form__actions">
+                            <button type="button" class="btn btn--secondary" onclick="cancelForm()">Отмена</button>
+                            <button type="button" class="btn btn--primary" onclick="submitForm()">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
         </div>
+
+        <script src="../src/modal.js"></script>
+        <script src="../src/theme.js"></script>
     </body>
 </html>
